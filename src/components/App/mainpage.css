@@ -1,0 +1,62 @@
+#navBar {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#navBar a {
+    text-decoration: none;
+    color: #fff0000;
+    font-size: 0.5rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: row; 
+    margin: 0 1rem;
+}
+
+#navBar a {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: yellow;
+    width: 100%;
+    margin: 5px;
+    font-size: 1.8rem;
+
+}
+
+#navbar nav {
+    margin: 10px;
+
+}
+
+#root .container #navBar .navbar a{
+    width:139% !important;
+    transform:
+}
+
+/* Button */
+.navbar .form-inline .btn-outline-success{
+}
+
+   /* Navigation */
+#navBar nav{
+    width:577px;
+    transform:translatex(0px) translatey(0px);
+}
+
+html {
+    text-align: center;
+    background-image: url("./desktop_background.jpg");
+    background-attachment: fixed;
+}
+
