@@ -3,49 +3,36 @@
     align-items: space-between;
     justify-content: space-between;
     flex-direction: row;
+    margin-bottom:25px;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    font-size: 2.5rem;
-    font-weight: 500;
-    margin: 0 1rem;
-    border-radius: 0.5rem;
-    background-color: rgb(184, 184, 50);
-    width: 100%;
-}
 
-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row; 
-    margin: 0 1rem;
-}
 
 div#root {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(184, 184, 50);
+    background-color: rgb(218, 160, 26);
     width: 100%;
     margin: 5px;
 }
 
 a {
     color: rgba(0, 0, 0, 0.836);
+    font-size: 80px;
 }
 
 #navbar nav {
-    margin: 10px;
-    background-color: rgb(184, 184, 50);
+    margin: 0%;
+    background-color: rgb(238, 180, 18);
+    height: 30%;
 
 }
 
 #root .container #navBar .navbar a {
   width: 346.5%;
+  font-size: 2.25rem;
 }
 
 /* Button */
@@ -55,42 +42,20 @@ a {
     transform:translatex(0px) translatey(0px);
 }
 
-html {
-    text-align: center;
-    background-image: url("./desktop_background.jpg");
-    background-attachment: fixed;
-}
-/* Universal Styles */
-
-html {
-    font-size: 18px;
-  }
   
   @media only screen and (max-width: 560px) {
     html {
-      font-size: 15px;
+      font-size: 35px;
+      text-align: center;
+      background-image: url("./desktop_background.jpg");
+      background-attachment: fixed;
+      font-size: 18px;
     }
   }
   
   input:focus {
     outline: none;
   }
-  
-  /* Reusable Component - Image Container */
-  
-.image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-  background: #000;
-}
-  
-  .image-container img {
-    width: 100%;
-  }
-  
-  /* App Styles */
   
   .App {
     font-family: 'Work Sans', sans-serif;
@@ -101,7 +66,7 @@ html {
     text-align: center;
     background-color: #46ec13;
     font-family: Poppins, sans-serif;
-    font-size: 1.8rem;
+    font-size: 100px;
     color: #fff;
   }
 /* Navigation */
@@ -136,7 +101,7 @@ html {
   border-style:solid;
   border-color:transparent;
   white-space:break-spaces;
-  font-size:36px;
+  font-size: 30px;
   line-height:1em;
   text-transform:lowercase;
   font-weight:500;
@@ -151,7 +116,7 @@ html {
  
  /* Navigation */
  #root .container #navBar nav{
-  background-color:#d0fb50 !important;
+  background-color:#b3ea11 !important;
  }
  
  /* Navbar */
@@ -159,4 +124,44 @@ html {
   text-shadow:rgb(255, 0, 0) -1px 0px 0px, rgb(0, 255, 255) 1px 0px 0px !important;
   text-decoration:none !important;
   width:100% !important;
+ }
+
+ #search-business-form input[type=text].form-control:nth-child(1) {
+  margin-left: 30px;
+  margin-right: 20px;
+ }
+ 
+#search-business-form input[name=Location] {
+  margin-left: 30px;
+  margin-right: 20px;
+ }
+ /* Search business form */
+#search-business-form{
+  position:relative;
+  bottom: -200px;
+ }
+ 
+ /* Input */
+ #search-business-form input[type=Location]{
+  overflow:visible;
+  width:313px !important;
+  height:50px;
+ }
+ 
+ /* Input */
+ #search-business-form input[type=Term]{
+  height:50px;
+  width:300px;
+ }
+ 
+ /* Link */
+ #navBar .navbar a{
+  transform:translatex(0px) translatey(-38px);
+  position:relative;
+  left:-27px;
+  margin-bottom: -27px;
+ }
+ 
+ #search-business-form .btn-outline-success {
+  margin-left: 5px;
  }

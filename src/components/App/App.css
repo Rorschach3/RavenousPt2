@@ -4,6 +4,11 @@
   background-attachment: fixed;
 }
 
+html {
+  text-align: center;
+  background-image: url("./desktop_background.jpg");
+  background-attachment: fixed;
+}
 
 .App-logo {
   height: 40vmin;
@@ -41,14 +46,12 @@
 }
 
 a {
-  text-color: green;
-}
-
-a {
-  text-weight: bold;
+  caret-color: green;
+  font-weight: bold;
 }
 
 p {
-  text-weight: bold;
-  text-size: 20px;
+  font-weight: bold;
+  font-size: 20px;
 }
+

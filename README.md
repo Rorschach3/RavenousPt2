@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Ravenous
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Ravenous is a client-side React application that harnesses the power of the Yelp Fusion API to provide users with a seamless experience of searching for local businesses. With Ravenous, you can effortlessly explore and discover a wide range of businesses based on your specific preferences.
 
-## Available Scripts
+The search functionality of Ravenous is highly flexible and intuitive. You can enter two main parameters: `term` and `location`. While the `term` input is optional, it allows you to narrow down your search by specifying keywords related to the type of business you're interested in. For example, entering "pizza" as the search term will retrieve results specifically for pizzerias in the designated location.
 
-In the project directory, you can run:
+Speaking of location, Ravenous accommodates various input formats. Whether you input a city, state, zip code, or any combination of these parameters, the application will swiftly fetch results matching your location criteria. Moreover, you have the option to use longitude and latitude coordinates for precise business searches.
 
-### `npm start`
+Ravenous simplifies the process of finding local businesses by leveraging the extensive Yelp Fusion API. To ensure successful API requests, an API key is needed in the header. You can easily obtain an API key by signing up at the Yelp Developers section [here](https://www.yelp.com/developers/v3/manage_app).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once you have your API key, Ravenous opens up a world of possibilities for discovering businesses. The Yelp Fusion API provides various endpoints and features to enhance your search experience. You can explore comprehensive documentation and learn more about the different endpoints by visiting the Yelp Developers documentation [here](https://docs.developer.yelp.com/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project is based on CodeCademy's practice project 'Ravenous Part 2: Passing Information' as part of their React beginner's tutorial project. 
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Fork the repository from [Github](https://github.com/Rorschach3/RavenousPt2) and clone it using the following command:
 
-### `npm run build`
+```sh
+git clone https://github.com/Rorschach3/RavenousPt2.git .
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Before starting the server, make sure you have all the necessary files and dependencies installed. You can do this by running either of the following commands:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sh
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+or
 
-### `npm run eject`
+```sh
+yarn install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Once the installation is complete, start the server by running either of the following commands:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```text
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+or
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```sh
+yarn start
+```
 
-## Learn More
+4. A browser window should automatically open, indicating that the program is running on `localhost` port `3000`. If the browser window doesn't open automatically, you can manually open a browser and go to `http://localhost:3000/`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. Congratulations! You can now use Ravenous to search for businesses using Yelp's Fusion API. Explore and discover local businesses based on your preferences and enjoy the seamless experience provided by Ravenous.

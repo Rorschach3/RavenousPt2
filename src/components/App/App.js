@@ -5,18 +5,16 @@ import BusinessList from '../BusinessList/BusinessList';
 import SearchBar from '../SearchBar/SearchBar';
 import Mainpage from '../App/Mainpage';
 
+
 const App = () => {
   const [businesses, setBusinesses] = useState([]);
 
   const handleSearch = (term, location) => {
-  }
-
-
-
     // Perform API request and update the businesses state with the fetched data
     // You can use the term and location parameters to customize the API request
-    // Once the data is fetched, update the businesses state using setBusinesse  
-  
+    // Once the data is fetched, update the businesses state using setBusinesses
+  };
+
   return (
     <BrowserRouter>
       <div className="container">
@@ -27,7 +25,7 @@ const App = () => {
         </Routes>
       </div>
     </BrowserRouter>
-      );
-  };
+  );
+};
 
 export default App;

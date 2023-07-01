@@ -1,52 +1,83 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ searchYelp }) => {
   const [term, setTerm] = useState('');
   const [location, setLocation] = useState('');
+  const [sortBy, setSortBy] = useState('best_match');
 
+  const sortByOptions = {
+    'Best Match': 'best_match',
+    'Highest Rated': 'rating',
+    'Most Reviewed': 'review_count'
+  };
 
-const handleTerm = (e) => {
-  setTerm(event.target.value);
-}
+  const getSortByClass = (sortByOption) => {
+    return sortBy === sortByOption ? 'active' : '';
+  };
 
-const handleLocation = (e) => {
-  setLocation(event.target.value);
-}
+  const handleSortByChange = (sortByOption) => {
+    setSortBy(sortByOption);
+  };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  onSearch(term, location);
-}
+  const handleTermChange = (event) => {
+    setTerm(event.target.value);
+  };
 
-return (
-  <div id='navBar' className='Container'>
-    <nav className="navbar navbar-light bg-light justify-content-between">
-      <a className="navbar-brand">Ravenous</a>
+  const handleLocationChange = (event) => {
+    setLocation(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    searchYelp(term, location, sortBy);
+  };
+
+  const renderSortByOptions = () => {
+    return Object.keys(sortByOptions).map((sortByOption) => {
+      const sortByOptionValue = sortByOptions[sortByOption];
+      return (
+        <li
+          className={getSortByClass(sortByOptionValue)}
+          key={sortByOptionValue}
+          onClick={() => handleSortByChange(sortByOptionValue)}
+        >
+          {sortByOption}
+        </li>
+      );
+    });
+  };
+
+  return (
+    <div className="SearchBar">
+      <div className="SearchBar-sort-options">
+        <ul>{renderSortByOptions()}</ul>
+      </div>
       <form id="search-business-form" onSubmit={handleSubmit}>
         <input
           className="form-control mr-sm-2"
           type="text"
+          name="term"
           placeholder="Business"
           aria-label="Business"
           value={term}
-          onChange={handleTerm}
+          onChange={handleTermChange}
         />
         <input
           className="form-control mr-sm-2"
           type="text"
+          name="location"
           placeholder="Location"
           aria-label="Location"
           value={location}
-          onChange={handleLocation}
+          onChange={handleLocationChange}
         />
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
           Search
         </button>
       </form>
-    </nav>
-  </div>
-);
+    </div>
+  );
 };
 
 export default SearchBar;
