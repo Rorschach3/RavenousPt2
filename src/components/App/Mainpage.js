@@ -6,7 +6,7 @@ function Mainpage() {
     <div id='navBar' className='Container'>
         <nav className="navbar navbar-light bg-light justify-content-between">
         <a className="navbar-brand">Ravenous</a>
-        <form className="form-inline">
+        <form id="search-business-form">
             <input className="form-control mr-sm-2" type="Business" placeholder="Business" aria-label="Location"></input>
             <input className="form-control mr-sm-2" type="Location" placeholder="Location" aria-label="Business"></input>
 

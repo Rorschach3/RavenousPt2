@@ -13,7 +13,7 @@ const business = {
   reviewCount: 90
   };
 
-const Business = () => {
+const Business = ({ business }) => {
   return (
     <div className={styles.Business}>
       <div className={styles.imageContainer}>
