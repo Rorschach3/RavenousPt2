@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './mainpage.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BusinessList from '../BusinessList/BusinessList';
-import { renderSortByOptions } from '../SearchBar/SearchBar';
 
 const REACT_APP_API_KEY = 'bGUFUXszfq4PPppy6eB3L0y9kCfPlmQ0CE1h3jgttqg6kEURVnQDK9P7iuu6VpEybd5lvbgB5visIUFlt71NR5zFxqy_zXs7zRKdlDBsNP4D930pfnXf832wPCmdZHYx'
 const API_ENDPOINT = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search';
@@ -45,7 +44,6 @@ function Mainpage({ onSearch }) {
   return (
     <div className="SearchBar">
       <div className="SearchBar-sort-options">
-        <ul>{renderSortByOptions()}</ul>
       </div>
       <form id="search-business-form" action="https://api.yelp.com/v3/businesses/search?location" onSubmit={handleSubmit}>
         <input
