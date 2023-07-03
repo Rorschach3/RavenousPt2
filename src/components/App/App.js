@@ -19,7 +19,7 @@ const App = () => {
     <BrowserRouter>
       <div className="container">
         <Routes>
-          <Route path="/" element={<Mainpage />} />
+          <Route path="/" element={<Mainpage onSearch={handleSearch} />} />
           <Route path="/search" element={<SearchBar onSearch={handleSearch} />} />
           <Route path="/businesses" element={<BusinessList businesses={businesses} />} />
         </Routes>

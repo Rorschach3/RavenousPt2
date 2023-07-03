@@ -30,7 +30,7 @@ const SearchBar = ({ searchYelp }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    searchYelp(term, location, sortBy);
+   console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
   };
 
   const renderSortByOptions = () => {
