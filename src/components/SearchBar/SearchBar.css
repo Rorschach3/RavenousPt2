@@ -4,7 +4,7 @@
   justify-content: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 25rem;
+  height: 5rem;
 }
 
 .SearchBarSortOptions ul {
@@ -100,7 +100,6 @@
     align-items: space-between;
     justify-content: space-between;
     flex-direction: row;
-    margin-bottom:25px;
 }
 
 body {
@@ -130,7 +129,6 @@ div#root {
     justify-content: center;
     background-color: rgb(218, 160, 26);
     width: 100%;
-    margin: 5px;
 }
 
 a {
@@ -141,7 +139,6 @@ a {
 #navbar nav {
     margin: 0%;
     background-color: rgb(238, 180, 18);
-    height: 30%;
 
 }
 

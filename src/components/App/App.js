@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BusinessList from '../BusinessList/BusinessList';
@@ -17,11 +17,12 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <div className="container">
+      <div>
+        <h1>ravenous</h1>
         <Routes>
           <Route path="/" element={<Mainpage onSearch={handleSearch} />} />
           <Route path="/search" element={<SearchBar onSearch={handleSearch} />} />
-          <Route path="/businesses" element={<BusinessList businesses={businesses} />} />
+          <Route path="/list" element={<BusinessList businesses={businesses} />} />
         </Routes>
       </div>
     </BrowserRouter>
