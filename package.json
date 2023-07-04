@@ -4,7 +4,7 @@
   "description": "Ravenous is a client-side React application that harnesses the power of the Yelp Fusion API to provide users with a seamless experience of searching for local businesses. With Ravenous, you can effortlessly explore and discover a wide range of businesses based on your specific preferences.",
   "main": "index.js",
   "engines": {
-    "node": "18.x",
+    "node": "20.x",
     "npm": "9.x"
   },
   "proxy": "https://cors-anywhere.herokuapp.com/",
@@ -28,11 +28,14 @@
   },
   "dependencies": {
     "bootstrap": "^3.4.1",
+    "create-react-app": "^5.0.1",
     "express": "^4.18.2",
     "mdb-react-ui-kit": "^6.1.0",
-    "node-fetch": "^3.3.1",
+    "node-fetch": "^2.6.12",
+    "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-router-dom": "^6.14.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "whatwg-fetch": "^3.6.2"
   }
 }

@@ -139,7 +139,10 @@ a {
 #navbar nav {
     margin: 0%;
     background-color: rgb(238, 180, 18);
-
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 20%;
 }
 
 #root .container #navBar .navbar a {
@@ -147,8 +150,6 @@ a {
   font-size: 2.25rem;
 }
 
-/* Button */
-   /* Navigation */
 #navBar nav{
     width:577px;
     transform:translatex(0px) translatey(0px);
@@ -159,11 +160,10 @@ html {
     background-image: url("./desktop_background.jpg");
     background-attachment: fixed;
 }
-/* Universal Styles */
 
 html {
-    font-size: 18px;
-  }
+  font-size: 18px;
+}
   
   @media only screen and (max-width: 560px) {
     html {
@@ -178,30 +178,30 @@ html {
   /* Reusable Component - Image Container */
   
 .image-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #000;
+display: flex;
+flex-direction: column;
+justify-content: center;
+background: #000;
 }
-  
-  .image-container img {
-    width: 100%;
-  }
-  
-  /* App Styles */
-  
-  .App {
-    font-family: 'Work Sans', sans-serif;
-  }
-  
-  h1 {
-    padding: .66rem 0;
-    text-align: center;
-    background-color: #46ec13;
-    font-family: Poppins, sans-serif;
-    font-size: 100px;
-    color: #fff;
-  }
+
+.image-container img {
+  width: 100%;
+}
+
+/* App Styles */
+
+.App {
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  padding: .66rem 0;
+  text-align: center;
+  background-color: #46ec13;
+  font-family: Poppins, sans-serif;
+  font-size: 100px;
+  color: #fff;
+}
 /* Navigation */
 #navBar nav{
   transform:translatex(8px) translatey(57px);
@@ -245,54 +245,54 @@ html {
   height:88px;
   overflow:visible;
   max-height:45px;
- }
- 
- /* Navigation */
- #root .container #navBar nav{
+}
+
+/* Navigation */
+#root .container #navBar nav{
   background-color:#b3ea11 !important;
- }
- 
- /* Navbar */
- #root .container #navBar .navbar{
+}
+
+/* Navbar */
+#root .container #navBar .navbar{
   text-shadow:rgb(255, 0, 0) -1px 0px 0px, rgb(0, 255, 255) 1px 0px 0px !important;
   text-decoration:none !important;
   width:100% !important;
- }
+}
 
- #search-business-form input[type=Location].form-control {
+#search-business-form input[type=Location].form-control {
   margin-left: 20px;
   margin-right: 10px;
   width: 20em;
- }
+}
 
- #search-business-form input[type=Term] {
-  margin-left: 20px;
-  margin-right: 10px;
-  width: 20em;
- }
- /* Search business form */
+#search-business-form input[type=Term] {
+margin-left: 20px;
+margin-right: 10px;
+width: 20em;
+}
+/* Search business form */
 #search-business-form{
   position:relative;
   bottom: -200px;
- }
- 
- /* Input */
- #search-business-form input[type=Location]{
-  overflow:visible;
-  width:313px !important;
-  height:50px;
- }
- 
- /* Input */
- #search-business-form input[type=Term]{
-  height:50px;
-  width:300px;
- }
- 
- /* Link */
- #navBar .navbar a{
-  transform:translatex(0px) translatey(-38px);
-  position:relative;
-  left:-27px;
-  margin-bottom: -27px;
- }
+}
+
+/* Input */
+#search-business-form input[type=Location]{
+overflow:visible;
+width:313px !important;
+height:50px;
+}
+
+/* Input */
+#search-business-form input[type=Term]{
+height:50px;
+width:300px;
+}
+
+/* Link */
+#navBar .navbar a{
+transform:translatex(0px) translatey(-38px);
+position:relative;
+left:-27px;
+margin-bottom: -27px;
+} 

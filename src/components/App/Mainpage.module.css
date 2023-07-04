@@ -1,0 +1,167 @@
+#navBar {
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom:25px;
+}
+
+
+
+div#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(218, 160, 26);
+    width: 100%;
+    margin: 5px;
+}
+
+a {
+    color: rgba(0, 0, 0, 0.836);
+    font-size: 80px;
+}
+
+#navbar nav {
+    margin: 0%;
+    background-color: rgb(238, 180, 18);
+    height: 30%;
+
+}
+
+#root .container #navBar .navbar a {
+  width: 346.5%;
+  font-size: 2.25rem;
+}
+
+/* Button */
+   /* Navigation */
+#navBar nav{
+    width:577px;
+    transform:translatex(0px) translatey(0px);
+}
+
+  
+  @media only screen and (max-width: 560px) {
+    html {
+      font-size: 35px;
+      text-align: center;
+      background-image: url("./desktop_background.jpg");
+      background-attachment: fixed;
+      font-size: 18px;
+    }
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  .App {
+    font-family: 'Work Sans', sans-serif;
+  }
+  
+  h1 {
+    padding: .66rem 0;
+    text-align: center;
+    background-color: #46ec13;
+    font-family: Poppins, sans-serif;
+    font-size: 100px;
+    color: #fff;
+  }
+/* Navigation */
+#navBar nav{
+  transform:translatex(8px) translatey(57px);
+  flex-direction:row;
+  align-items:center;
+  flex:1 1 0%;
+  flex-wrap:wrap;
+  justify-content:center !important;
+  display:flex;
+  clear:none;
+  visibility:visible;
+  opacity:1;
+  background-position-y:0%;
+  background-repeat:no-repeat;
+  background-clip:text;
+  color:transparent;
+  background-position-x:0%;
+  background-attachment:scroll;
+  background-size:auto;
+  float:none;
+  align-self:auto;
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-left:0px;
+  margin-top:-6px;
+  margin-bottom:15px;
+  border-bottom-right-radius:0px;
+  border-bottom-left-radius:0px;
+  border-width:0px;
+  border-style:solid;
+  border-color:transparent;
+  white-space:break-spaces;
+  font-size: 30px;
+  line-height:1em;
+  text-transform:lowercase;
+  font-weight:500;
+  word-spacing:-5px;
+  column-count:1;
+  direction:ltr;
+  letter-spacing:1px;
+  height:88px;
+  overflow:visible;
+  max-height:45px;
+ }
+ 
+ /* Navigation */
+ #root .container #navBar nav{
+  background-color:#b3ea11 !important;
+ }
+ 
+ /* Navbar */
+ #root .container #navBar .navbar{
+  text-shadow:rgb(255, 0, 0) -1px 0px 0px, rgb(0, 255, 255) 1px 0px 0px !important;
+  text-decoration:none !important;
+  width:100% !important;
+ }
+
+ #search-business-form input[type=text].form-control:nth-child(1) {
+  margin-left: 30px;
+  margin-right: 20px;
+ }
+ 
+#search-business-form input[name=Location] {
+  margin-left: 30px;
+  margin-right: 20px;
+ }
+ /* Search business form */
+#search-business-form{
+  position:relative;
+  bottom: -200px;
+ }
+ 
+ /* Input */
+ #search-business-form input[type=Location]{
+  overflow:visible;
+  width:313px !important;
+  height:50px;
+ }
+ 
+ /* Input */
+ #search-business-form input[type=Term]{
+  height:50px;
+  width:300px;
+ }
+ 
+ /* Link */
+ #navBar .navbar a{
+  transform:translatex(0px) translatey(-38px);
+  position:relative;
+  left:-27px;
+  margin-bottom: -27px;
+ }
+ 
+ #search-business-form .btn-outline-success {
+  margin-left: 5px;
+ }

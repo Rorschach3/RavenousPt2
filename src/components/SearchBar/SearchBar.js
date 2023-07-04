@@ -3,23 +3,35 @@ import './SearchBar.css';
 
 const API_ENDPOINT = 'https://api.yelp.com/v3/businesses/search'
 
+const sortByOptions = {
+  "Best Match": "best_match",
+  "Highest Rated": "rating",
+  "Most Reviewed": "review_count",
+};
  
 
-export default function SearchBar({ onSearch }){
+const SearchBar = ({ onSearch }) => {
   const [term, setTerm] = useState('');
   const [location, setLocation] = useState('');
+  const [sortBy, setSortBy] = useState("best_match");
+
+
+  const handleSortByChange = (sortByOption) => {
+    setSortBy(sortByOption)
+  }
 
 
   const handleTermChange = (e) => {
     setTerm(e.target.value)
   }
 
-const handleLocationChange = (e) => {
-  setLocation(e.target.value)
-}
+  const handleLocationChange = (e) => {
+    setLocation(e.target.value)
+  }
 
-  const handleSubmit = async(e) => {
+  const handleSearch = (e) => {
     e.preventDefault();
+    searchYelp(term, location, sortBy);
   }
 
 try {
@@ -49,16 +61,19 @@ try {
 }
 
 return (
-  <div id='navBar' className='Container'>
-    <nav className="navbar navbar-light bg-light justify-content-between">
-      <a className="navbar-brand">Ravenous</a>
-      <form id="search-business-form" onSubmit={handleSubmit}>
+  <div className={Styles.SearchBar}>
+    <a className="navbar-brand">Ravenous</a>
+    <div className={styles.SearchBarSortOptions}>
+      <ul>{renderSortByOptions()}</ul>
+    </div>
+    <form id="search-term-form" onSubmit={handleSubmit}>
+      <div className={styles.SearchBarFields}>
         <input
           className="form-control mr-sm-2"
           type="text"
           name="term"
-          placeholder="Business"
-          aria-label="Business"
+          placeholder="Search Business"
+          aria-label="Search Business"
           value={term}
           onChange={handleTerm}
         />
@@ -74,8 +89,10 @@ return (
         <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
           Search
         </button>
+        </div>
       </form>
-    </nav>
   </div>
   );
 }
+
+export default SearchBar;
