@@ -1,81 +1,74 @@
-import React, { useState } from 'react';
-import './SearchBar.css';
+import React, { useState } from "react";
+import styles from "./SearchBar.module.css";
 
-const API_ENDPOINT = 'https://api.yelp.com/v3/businesses/search'
+const sortByOptions = {
+  "Best Match": "best_match",
+  "Highest Rated": "rating",
+  "Most Reviewed": "review_count",
+};
 
- 
+const SearchBar = ({ searchYelp }) => {
+  const [term, setTerm] = useState("");
+  const [location, setLocation] = useState("");
+  const [sortBy, setSortBy] = useState("best_match");
 
-export default function SearchBar({ onSearch }){
-  const [term, setTerm] = useState('');
-  const [location, setLocation] = useState('');
+  const getSortByClass = (sortByOption) => {
+    if (sortBy === sortByOption) {
+      return styles.active;
+    }
+    return "";
+  };
 
+  const handleSortByChange = (sortByOption) => {
+    setSortBy(sortByOption);
+  };
 
-  const handleTermChange = (e) => {
-    setTerm(e.target.value)
-  }
+  const handleTermChange = (event) => {
+    setTerm(event.target.value);
+  };
 
-const handleLocationChange = (e) => {
-  setLocation(e.target.value)
-}
+  const handleLocationChange = (event) => {
+    setLocation(event.target.value);
+  };
 
-  const handleSubmit = async(e) => {
-    e.preventDefault();
-  }
+  const handleSearch = (event) => {
+    event.preventDefault();
+    searchYelp(term, location, sortBy);
+  };
 
-try {
-    const url = `${API_ENDPOINT}?location=${encodeURIComponent(
-      location
-    )}&term=${encodeURIComponent(term)}`;
+  const renderSortByOptions = () => {
+    return Object.keys(sortByOptions).map((sortByOption) => {
+      let sortByOptionValue = sortByOptions[sortByOption];
+      return (
+        <li
+          className={getSortByClass(sortByOptionValue)}
+          key={sortByOptionValue}
+          onClick={() => {
+            handleSortByChange(sortByOptionValue);
+          }}
+        >
+          {sortByOption}
+        </li>
+      );
+    });
+  };
 
-
-
-  const fetchConfig = {
-    method: 'GET',
-    body: JSON.stringify(data),
-    headers: {
-      'Authorization': 'Bearer bGUFUXszfq4PPppy6eB3L0y9kCfPlmQ0CE1h3jgttqg6kEURVnQDK9P7iuu6VpEybd5lvbgB5visIUFlt71NR5zFxqy_zXs7zRKdlDBsNP4D930pfnXf832wPCmdZHYx',
-      'Content-Type': 'application/json'
-    },
-  }
-
-  const response = (async) => fetch(url, fetchConfig)
-  if (response.ok) {
-    onSearch(data.businesses);
-  } else {
-    console.log('Error', response.status);
-  }
-} catch (error) {
-  console.log(error)
-}
-
-return (
-  <div id='navBar' className='Container'>
-    <nav className="navbar navbar-light bg-light justify-content-between">
-      <a className="navbar-brand">Ravenous</a>
-      <form id="search-business-form" onSubmit={handleSubmit}>
-        <input
-          className="form-control mr-sm-2"
-          type="text"
-          name="term"
-          placeholder="Business"
-          aria-label="Business"
-          value={term}
-          onChange={handleTerm}
-        />
-        <input
-          className="form-control mr-sm-2"
-          type="text"
-          name="location"
-          placeholder="Location"
-          aria-label="Location"
-          value={location}
-          onChange={handleLocation}
-        />
-        <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-          Search
-        </button>
+  return (
+    <div className={styles.SearchBar}>
+      <div className={styles.SearchBarSortOptions}>
+        <ul>{renderSortByOptions()}</ul>
+      </div>
+      <form onSubmit={handleSearch}>
+        <div className={styles.SearchBarFields}>
+          <input placeholder="Search Businesses" onChange={handleTermChange} />
+          <input placeholder="Where?" onChange={handleLocationChange} />
+        </div>
+        <div className={styles.SearchBarSubmit}>
+          <button type="submit">Let's Go</button>
+        </div>
       </form>
-    </nav>
-  </div>
+    </div>
   );
-}
+};
+
+export default SearchBar;

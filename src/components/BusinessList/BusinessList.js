@@ -1,16 +1,14 @@
 import React from "react";
+import styles from "./BusinessList.module.css";
+
 import Business from "../Business/Business";
-import styles from './BusinessList.module.css';
 
 const BusinessList = ({ businesses }) => {
   return (
-    <div>
-      <h1 className={styles.title}>Business List</h1>
-      <div className={styles.BusinessList}>
-        {businesses.map((business) => {
-          return <Business key={business.id} business={business} />;
-        })}
-      </div>
+    <div className={styles.BusinessList}>
+      {businesses.map((business) => {
+        return <Business business={business} key={business.name} />;
+      })}
     </div>
   );
 };
