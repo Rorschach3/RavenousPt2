@@ -25,7 +25,6 @@ function Mainpage({ onSearch }) {
     console.log(`Searching Yelp with ${term}, ${location}.`);
 
 
-    $.ajax({
     const url = `${API_ENDPOINT}?location=${encodeURIComponent(location)}&term=${encodeURIComponent(term)}`;
     const fetchConfig = {
       url: url,
@@ -35,9 +34,8 @@ function Mainpage({ onSearch }) {
         "x-requested-with": "xmlhttprequest",
         "Access-Control-Allow-Origin": "*",
         "Authorization": `Bearer ${REACT_APP_API_KEY}`
-      },
-    )}
-    };
+      }
+    }
     const response = await fetch(url, fetchConfig);
     if (response.ok) {
       const data = await response.json();
@@ -45,6 +43,7 @@ function Mainpage({ onSearch }) {
     } else {
       console.log('Error', response.status);
   };
+}
 
   return (
     <div className="SearchBar">
@@ -73,6 +72,5 @@ function Mainpage({ onSearch }) {
       </form>
     </div>
   );
-}
-
-export default Mainpage;
+  }
+  export default Mainpage;
