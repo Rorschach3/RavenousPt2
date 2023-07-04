@@ -1,6 +1,9 @@
 {
   "name": "ravenous",
   "version": "0.1.0",
+  "description": "Ravenous is a React app that allows users to search for restaurants using the Yelp API.",
+  "main": "index.js",
+  "node": "18.x",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

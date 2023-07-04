@@ -22,7 +22,7 @@ function Mainpage({ onSearch }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(`Searching Yelp with ${term}, ${location}.`);
+    console.log(`Searching Yelp with ${term}, ${location}`);
 
 
     const url = `${API_ENDPOINT}?location=${encodeURIComponent(location)}&term=${encodeURIComponent(term)}`;

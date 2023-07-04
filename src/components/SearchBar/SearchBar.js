@@ -60,8 +60,9 @@ const SearchBar = ({ searchYelp }) => {
       </div>
       <form onSubmit={handleSearch}>
         <div className={styles.SearchBarFields}>
-          <input placeholder="Search Businesses" onChange={handleTermChange} />
-          <input placeholder="Where?" onChange={handleLocationChange} />
+          <input placeholder="Search Businesses" onChange={handleTermChange} type='text' id='location' name='location' />
+          <input placeholder="Where?" onChange={handleLocationChange} required type='text'id='location' name='location' />
+          <span id="location-validation" className="validation-message">Enter a City, State, or Zipcode</span>
         </div>
         <div className={styles.SearchBarSubmit}>
           <button type="submit">Let's Go</button>
