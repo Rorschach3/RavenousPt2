@@ -5,7 +5,7 @@ import BusinessList from '../BusinessList/BusinessList';
 
 
 const REACT_APP_API_KEY = 'bGUFUXszfq4PPppy6eB3L0y9kCfPlmQ0CE1h3jgttqg6kEURVnQDK9P7iuu6VpEybd5lvbgB5visIUFlt71NR5zFxqy_zXs7zRKdlDBsNP4D930pfnXf832wPCmdZHYx'
-const API_ENDPOINT = 'https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search';
+const API_ENDPOINT = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=50";
 
 function Mainpage({ onSearch }) {
   const [term, setTerm] = useState('');
@@ -23,14 +23,20 @@ function Mainpage({ onSearch }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(`Searching Yelp with ${term}, ${location}.`);
+
+
+    $.ajax({
     const url = `${API_ENDPOINT}?location=${encodeURIComponent(location)}&term=${encodeURIComponent(term)}`;
     const fetchConfig = {
+      url: url,
       method: 'get',
       headers: {
-        Authorization: `Bearer ${REACT_APP_API_KEY}`,
-        'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*',
+        "accept": "application/json",
+        "x-requested-with": "xmlhttprequest",
+        "Access-Control-Allow-Origin": "*",
+        "Authorization": `Bearer ${REACT_APP_API_KEY}`
       },
+    )}
     };
     const response = await fetch(url, fetchConfig);
     if (response.ok) {
@@ -38,8 +44,6 @@ function Mainpage({ onSearch }) {
       onSearch(data.businesses);
     } else {
       console.log('Error', response.status);
-    }
-    app.use(cors())
   };
 
   return (
