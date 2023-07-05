@@ -94,11 +94,12 @@
 
 h1 {
   margin-bottom: 0rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: flex;
-  width: 20px;
+  width: 100%;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 div.SearchBar-fields {
@@ -108,13 +109,23 @@ div.SearchBar-fields {
   align-items: space-between;
   padding: 2rem;
 }
-ul {
+a {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: space-evenly;
-
+  color: rgb(255, 255, 255);
+  flex-shrink: 1;
 }
+
+a:hover {
+  color: #f6f6e1;
+  font-size: 1.05rem;
+  border:solid 1px #f6f6e1;
+  outline: cursor;
+  border-radius: 15px;
+  background-color: hsla(100, 100, 100, 80)
+} 
 /* List */
 #root div ul{
   padding-top:0px;
@@ -129,12 +140,12 @@ ul {
  /* Heading */
 #root > div > h1{
   margin-top:0px;
-  transform:translatex(-3px) translatey(3px);
+  transform:translatex(-6px) translatey(0px);
   padding-bottom:48px;
-  padding-left:49px;
+  padding-left:40px;
  }
  
- #root > div > ul {
+ #root > div > a {
   display: flex;
   flex-direction: column;
   align-items: space-between;
@@ -143,15 +154,19 @@ ul {
 
  /* Division */
 #root form div{
-  padding-top:0px;
-  padding-bottom:432px;
+  padding-top:-5px;
+  padding-bottom:400px;
  }
  
  /* List */
- #root div ul{
-  padding-left:421px;
-  margin-right:0px;
-  padding-right:472px;
+ #root div a{
+  padding-left:50px;
+  margin-right:10px;
+  padding-right:50px;
+  margin-left:10px;
  }
- 
- 
+
+
+ input.form-control.mr-sm-2 {
+  height: 1.5rem;
+ }

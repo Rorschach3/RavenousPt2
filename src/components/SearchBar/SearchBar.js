@@ -56,13 +56,13 @@ const SearchBar = ({ onSearch }) => {
     return Object.keys(sortByOptions).map((sortByOption) => {
       const sortByOptionValue = sortByOptions[sortByOption];
       return (
-        <li
+        <a
           className={sortBy === sortByOptionValue ? 'active' : ''}
           key={sortByOptionValue}
           onClick={() => handleSortByChange(sortByOptionValue)}
         >
           {sortByOption}
-        </li>
+        </a>
       );
     });
   };
@@ -72,6 +72,7 @@ const SearchBar = ({ onSearch }) => {
       <div className="SearchBar-sort-options">
         <ul>{renderSortByOptions()}</ul>
       </div>
+      <div className="container">
       <form id="search-term-form" onSubmit={handleSearch}>
         <div className="SearchBar-fields">
           <input
@@ -97,6 +98,7 @@ const SearchBar = ({ onSearch }) => {
           </button>
         </div>
       </form>
+      </div>
     </div>
   );
 };
