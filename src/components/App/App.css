@@ -4,54 +4,51 @@
   background-attachment: fixed;
 }
 
+versal Styles */
+
 html {
+  font-size: 18px;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+@media only screen and (max-width: 560px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+/* App Styles */
+
+.App {
+  font-family: "Work Sans", sans-serif;
+}
+
+.App h1 {
+  padding: 0.36rem 0;
   text-align: center;
-  background-image: url("./desktop_background.jpg");
-  background-attachment: fixed;
+  background-color: #cca353;
+  font-family: Poppins, sans-serif;
+  font-size: 2.8rem;
+  color: #fff;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  align-items: space-evenly;
+  flex-wrap: wrap;
+  font-size: 2rem;
 
-.App-link {
-  color: #61dafb;
+  margin-bottom: -20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-a {
-  caret-color: green;
-  font-weight: bold;
-}
-
-p {
-  font-weight: bold;
-  font-size: 20px;
-}
-

@@ -2,15 +2,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-image: url("./desktop_background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 5rem;
+  min-height: 100vh;
 }
 
 .SearchBarSortOptions ul {
   display: flex;
   justify-content: center;
-  margin-bottom: 2.22rem;
+  margin-bottom: 3.22rem;
   color: #ffffff;
 }
 
@@ -22,7 +23,7 @@
   line-height: 1.13;
   text-align: center;
   font-weight: 600;
-  font-size: 0.83rem;
+  font-size: 2.83rem;
   transition: color 0.25s;
   list-style: none;
 }
@@ -44,13 +45,11 @@
 }
 
 .SearchBarFields input {
-  width: 21rem;
-  padding: 0.66rem 1rem;
-  margin-right: 2.22rem;
-  border: 1px solid #fff;
+  width: 10rem;
+  padding: 0.3rem 1rem;
   border-radius: 4px;
-  font-size: 0.77rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
 .SearchBarFields input:last-child {
@@ -61,238 +60,98 @@
   text-align: center;
 }
 
-.SearchBarSubmit a {
-  border-radius: 4px;
+.SearchBarSubmit button {
+  border-radius: 1px;
   padding: 0.72rem 1.7rem;
   background-color: #cca353;
   color: #ffffff;
   font-weight: 600;
   transition: background-color 0.5s;
+  border: 0;
 }
 
-.SearchBarSubmit a:hover {
+.SearchBarSubmit button:hover {
   cursor: pointer;
   background-color: #a7874b;
 }
 
 @media only screen and (max-width: 560px) {
   .SearchBar {
-    background-image: url("./background_search_mobile.jpg");
+    background-image: url("./mobile_background.jpg");
   }
 
   .SearchBarSortOptions ul {
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .SearchBarFields {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .SearchBarFields input {
-    margin-right: 0;
-    margin-bottom: 0.86rem;
-  }
-}
-#navBar {
-    display: flex;
-    align-items: space-between;
-    justify-content: space-between;
     flex-direction: row;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin: 0 1rem;
-    border-radius: 1rem;
-    background-color: rgb(238, 238, 66);
-    width: 100%;
-}
-
-form {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row; 
-    margin: 0 1rem;
-    overflow: hidden;
-}
-
-div#root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(218, 160, 26);
-    width: 100%;
-}
-
-a {
-    color: rgba(0, 0, 0, 0.836);
-    font-size: 80px;
-}
-
-#navbar nav {
-    margin: 0%;
-    background-color: rgb(238, 180, 18);
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    height: 20%;
-}
-
-#root .container #navBar .navbar a {
-  width: 346.5%;
-  font-size: 2.25rem;
-}
-
-#navBar nav{
-    width:577px;
-    transform:translatex(0px) translatey(0px);
-}
-
-html {
-    text-align: center;
-    background-image: url("./desktop_background.jpg");
-    background-attachment: fixed;
-}
-
-html {
-  font-size: 18px;
-}
-  
-  @media only screen and (max-width: 560px) {
-    html {
-      font-size: 35px;
-    }
   }
-  
-  input:focus {
-    outline: none;
-  }
-  
-  /* Reusable Component - Image Container */
-  
-.image-container {
-display: flex;
-flex-direction: column;
-justify-content: center;
-background: #000;
 }
 
-.image-container img {
-  width: 100%;
-}
-
-/* App Styles */
-
-.App {
-  font-family: 'Work Sans', sans-serif;
-}
 
 h1 {
-  padding: .66rem 0;
-  text-align: center;
-  background-color: #46ec13;
-  font-family: Poppins, sans-serif;
-  font-size: 100px;
-  color: #fff;
+  margin-bottom: 0rem;
+  font-size: 2rem;
+  display: flex;
+  width: 20px;
+  justify-content: center;
+  align-items: center;
 }
-/* Navigation */
-#navBar nav{
-  transform:translatex(8px) translatey(57px);
-  flex-direction:row;
-  align-items:center;
-  flex:1 1 0%;
-  flex-wrap:wrap;
-  justify-content:center !important;
-  display:flex;
-  clear:none;
-  visibility:visible;
-  opacity:1;
-  background-position-y:0%;
-  background-repeat:no-repeat;
-  background-clip:text;
-  color:transparent;
-  background-position-x:0%;
-  background-attachment:scroll;
-  background-size:auto;
-  float:none;
-  align-self:auto;
+
+div.SearchBar-fields {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+  padding: 2rem;
+}
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-evenly;
+
+}
+/* List */
+#root div ul{
   padding-top:0px;
-  padding-bottom:0px;
-  margin-left:0px;
-  margin-top:-6px;
-  margin-bottom:15px;
-  border-bottom-right-radius:0px;
-  border-bottom-left-radius:0px;
-  border-width:0px;
-  border-style:solid;
-  border-color:transparent;
-  white-space:break-spaces;
-  font-size: 30px;
-  line-height:1em;
-  text-transform:lowercase;
-  font-weight:500;
-  word-spacing:-5px;
-  column-count:1;
-  direction:ltr;
-  letter-spacing:1px;
-  height:88px;
-  overflow:visible;
-  max-height:45px;
-}
+  padding-right:60px;
+  padding-left:60px;
+  margin-top:-40px;
 
-/* Navigation */
-#root .container #navBar nav{
-  background-color:#b3ea11 !important;
-}
+  margin-right:60px;
+  margin-left:60px;
+ }
 
-/* Navbar */
-#root .container #navBar .navbar{
-  text-shadow:rgb(255, 0, 0) -1px 0px 0px, rgb(0, 255, 255) 1px 0px 0px !important;
-  text-decoration:none !important;
-  width:100% !important;
-}
+ /* Heading */
+#root > div > h1{
+  margin-top:0px;
+  transform:translatex(-3px) translatey(3px);
+  padding-bottom:48px;
+  padding-left:49px;
+ }
+ 
+ #root > div > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  justify-content: space-between
+ }
 
-#search-business-form input[type=Location].form-control {
-  margin-left: 20px;
-  margin-right: 10px;
-  width: 20em;
-}
-
-#search-business-form input[type=Term] {
-margin-left: 20px;
-margin-right: 10px;
-width: 20em;
-}
-/* Search business form */
-#search-business-form{
-  position:relative;
-  bottom: -200px;
-}
-
-/* Input */
-#search-business-form input[type=Location]{
-overflow:visible;
-width:313px !important;
-height:50px;
-}
-
-/* Input */
-#search-business-form input[type=Term]{
-height:50px;
-width:300px;
-}
-
-/* Link */
-#navBar .navbar a{
-transform:translatex(0px) translatey(-38px);
-position:relative;
-left:-27px;
-margin-bottom: -27px;
-} 
+ /* Division */
+#root form div{
+  padding-top:0px;
+  padding-bottom:432px;
+ }
+ 
+ /* List */
+ #root div ul{
+  padding-left:421px;
+  margin-right:0px;
+  padding-right:472px;
+ }
+ 
+ 

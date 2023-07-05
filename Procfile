@@ -1,7 +1,13 @@
-web: node app.js
+const http = require('http');
 
-let port = process.env.PORT;
-if (port == null || port == "") {
-  port = 3000;
-}
-app.listen(port);
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello, world!');
+});
+
+const port = process.env.PORT || 5000;
+
+server.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});

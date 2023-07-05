@@ -7,7 +7,6 @@
 }
 
 
-
 div#root {
     display: flex;
     flex-direction: column;
@@ -18,16 +17,11 @@ div#root {
     margin: 5px;
 }
 
-a {
-    color: rgba(0, 0, 0, 0.836);
-    font-size: 80px;
-}
 
 #navbar nav {
     margin: 0%;
     background-color: rgb(238, 180, 18);
     height: 30%;
-
 }
 
 #root .container #navBar .navbar a {
@@ -35,10 +29,9 @@ a {
   font-size: 2.25rem;
 }
 
-/* Button */
-   /* Navigation */
+
 #navBar nav{
-    width:577px;
+    width:100%;
     transform:translatex(0px) translatey(0px);
 }
 
@@ -48,7 +41,7 @@ a {
       font-size: 35px;
       text-align: center;
       background-image: url("./desktop_background.jpg");
-      background-attachment: fixed;
+      background-attachment: cover;
       font-size: 18px;
     }
   }
@@ -62,17 +55,22 @@ a {
   }
   
   h1 {
-    padding: .66rem 0;
+    width: 100%;
     text-align: center;
-    background-color: #46ec13;
+    background-color: #d3aa14c3;
     font-family: Poppins, sans-serif;
-    font-size: 100px;
+    font-size: 2rem;
     color: #fff;
+    height: 1.5rem;
+    padding: 3.5rem 0;
+    padding: 2rem;
   }
+
+
 /* Navigation */
 #navBar nav{
   transform:translatex(8px) translatey(57px);
-  flex-direction:row;
+  flex-direction:column;
   align-items:center;
   flex:1 1 0%;
   flex-wrap:wrap;
@@ -92,8 +90,6 @@ a {
   align-self:auto;
   padding-top:0px;
   padding-bottom:0px;
-  margin-left:0px;
-  margin-top:-6px;
   margin-bottom:15px;
   border-bottom-right-radius:0px;
   border-bottom-left-radius:0px;
@@ -101,24 +97,26 @@ a {
   border-style:solid;
   border-color:transparent;
   white-space:break-spaces;
-  font-size: 30px;
+  font-size: 60px;
   line-height:1em;
   text-transform:lowercase;
   font-weight:500;
   word-spacing:-5px;
   column-count:1;
   direction:ltr;
-  letter-spacing:1px;
-  height:88px;
+  letter-spacing:3px;
+  height:100px;
   overflow:visible;
   max-height:45px;
  }
  
+
  /* Navigation */
  #root .container #navBar nav{
   background-color:#b3ea11 !important;
  }
  
+
  /* Navbar */
  #root .container #navBar .navbar{
   text-shadow:rgb(255, 0, 0) -1px 0px 0px, rgb(0, 255, 255) 1px 0px 0px !important;
@@ -126,15 +124,19 @@ a {
   width:100% !important;
  }
 
+
  #search-business-form input[type=text].form-control:nth-child(1) {
   margin-left: 30px;
   margin-right: 20px;
  }
  
+
 #search-business-form input[name=Location] {
   margin-left: 30px;
   margin-right: 20px;
  }
+
+
  /* Search business form */
 #search-business-form{
   position:relative;
@@ -148,20 +150,66 @@ a {
   height:50px;
  }
  
+
  /* Input */
  #search-business-form input[type=Term]{
-  height:50px;
-  width:300px;
+  height:10px;
+  width:100%;
  }
  
+
  /* Link */
  #navBar .navbar a{
   transform:translatex(0px) translatey(-38px);
   position:relative;
-  left:-27px;
-  margin-bottom: -27px;
+  left:0px;
+  margin-bottom: 0px;
+ }
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 6rem;
+  align-items: center;
+  list-style: none;
+}
+
+/* Heading */
+#root > div > h1{
+  position:relative;
+  top:-68px;
+  transform:translatex(0px) translatey(0px);
+  min-height:38px;
+  padding-bottom:43px;
+  margin-bottom:0px;
  }
  
- #search-business-form .btn-outline-success {
-  margin-left: 5px;
+ /* List */
+ #root div ul{
+  position:static;
+  list-style-type:none;
+  list-style-position:outside;
+  overflow:visible;
+  height:16px;
+  column-count:1;
+  word-spacing:2.7px;
+  text-align:left;
+  line-height:0px;
+  font-size:18px;
+  font-weight:500;
+  white-space:pre-wrap;
+ }
+ 
+ /* List */
+ #root div div div ul{
+  text-shadow:rgb(255, 255, 255) 0px 1px 1px, rgb(0, 0, 0) 0px -1px 1px !important;
+  text-decoration:none !important;
+ }
+ 
+ #root div ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
  }
