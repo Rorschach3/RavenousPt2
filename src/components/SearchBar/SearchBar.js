@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SearchBar.css';
 
-const API_ENDPOINT = 'https://api.yelp.com/v3/businesses/search';
+const API_ENDPOINT = 'https://justcors.com/tl_f4b7a4a/https://api.yelp.com/v3/businesses/search';
 
 const SearchBar = ({ onSearch }) => {
   const [term, setTerm] = useState('');
@@ -32,7 +32,7 @@ const SearchBar = ({ onSearch }) => {
     const fetchConfig = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer bGUFUXszfq4PPppy6eB3L0y9kCfPlmQ0CE1h3jgttqg6kEURVnQDK9P7iuu6VpEybd5lvbgB5visIUFlt71NR5zFxqy_zXs7zRKdlDBsNP4D930pfnXf832wPCmdZHYx',
+        Authorization: 'Bearer bGUFUXszfq4PPppy6eB3L0y9kCfPlmQ0CE1h3jgttqg6kEURVnQDK9P7iuu6VpEybd5lvbgB5visIUFlt71NR5zFxqy_zXs7zRKdlDBsNP4D930pfnXf832wPCmdZHYx',
         'Content-Type': 'application/json',
       },
     };
@@ -93,7 +93,7 @@ const SearchBar = ({ onSearch }) => {
             value={location}
             onChange={handleLocationChange}
           />
-          <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button className="my-2 my-sm-0" type="submit">
             Search
           </button>
         </div>

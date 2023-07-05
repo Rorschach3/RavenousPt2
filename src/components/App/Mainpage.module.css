@@ -12,7 +12,7 @@ div#root {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgb(218, 160, 26);
+    background-color: rgba(229, 157, 93, 0.94);
     width: 100%;
     margin: 5px;
 }
@@ -20,7 +20,7 @@ div#root {
 
 #navbar nav {
     margin: 0%;
-    background-color: rgb(238, 180, 18);
+    background-color: rgb(234, 143, 16);
     height: 30%;
 }
 
@@ -57,7 +57,7 @@ div#root {
   h1 {
     width: 100%;
     text-align: center;
-    background-color: #d3aa14c3;
+    background-color: #e6a43b; /*Navbar Color Changer */
     font-family: Poppins, sans-serif;
     font-size: 2rem;
     color: #fff;
@@ -169,8 +169,8 @@ div#root {
 ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 6rem;
+  justify-content: space-evenly;
+  margin: 4rem;
   align-items: center;
   list-style: none;
 }

@@ -27,7 +27,9 @@ const App = () => {
     // </BrowserRouter>
     <div className={styles.App}>
       <h1>ravenous</h1>
+      <div className='sort-by'>
       <SearchBar searchYelp={searchYelp} />
+      </div>
       <BusinessList businesses={businesses} />
     </div>
   );

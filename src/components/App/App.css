@@ -34,21 +34,169 @@ input:focus {
 .App h1 {
   padding: 0.36rem 0;
   text-align: center;
-  background-color: #cca353;
+  background-color: #f1940a;
   font-family: Poppins, sans-serif;
-  font-size: 2.8rem;
+  font-size: 1.5rem;
   color: #fff;
-  margin: 0;
 }
 
 
 form {
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: column;
-  align-items: space-evenly;
-  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
   font-size: 2rem;
-
-  margin-bottom: -20px;
 }
+
+.sort-by {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  margin: 0;
+}
+
+#root > div:nth-child(1) > div:nth-child(3) > h1:nth-child(1) {
+  margin-left: -100px;
+  bottom: 8px;
+  padding-bottom: 246px;
+  padding-top: 24px;
+ }
+ 
+/* Element | http://localhost:3000/ */
+
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar {
+  width: 100%;
+  height: 100%;
+  background-attachment: cover;
+
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 750px;   /* !!!!Backghround Image!!!! */
+}
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar-sort-options > ul:nth-child(1) {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar-sort-options > ul:nth-child(1) > a:nth-child(3) {
+  margin-left: -30px;
+  margin-right: 90px;
+  padding-left: 0px;
+  padding-right: 100px;
+  width: 188.333px;
+  height: 22.6px;
+}
+
+/* Element | http://localhost:3000/ */
+
+.active {
+  margin-left: 234px;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: 0px;
+  width: 150px;
+  height: 17.6px;
+}
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar-sort-options > ul:nth-child(1) > a:nth-child(2) {
+  padding-right: 50px;
+  padding-left: 0px;
+  margin-left: -100px;
+  margin-right: 15rem;
+  height: 25.6px;
+  width: 200px;
+}
+
+
+/* Element | http://localhost:3000/ */
+
+
+/* Element | http://localhost:3000/ */
+
+.my-2 {
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-left: 10px;
+  margin-top: 0px;
+}
+
+/* Element | http://localhost:3000/ */
+
+input.form-control:nth-child(2) {
+  width: 153.667px;
+  margin-left: 5px;
+}
+
+/* Element | http://localhost:3000/ */
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar-fields {
+  /* margin-top: 2px; */
+  margin-top: 10px;
+  width: 522px;
+  padding-right: 0px;
+  padding-left: 21px;
+}
+
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar-sort-options > ul:nth-child(1) > a:nth-child(3) {
+  margin-left: 0px;
+  padding-left: 0px;
+  width: 150px;
+  margin-right: 450px;
+  padding-right: 0px;
+}
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar-sort-options > ul:nth-child(1) > a:nth-child(2) {
+  padding-left: 0px;
+  padding-right: -1;;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+/* Element | http://localhost:3000/ */
+
+.active {
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 350px;
+  width: 230.2px;
+}
+
+/* Element | http://localhost:3000/ */
+
+input.form-control:nth-child(2) {
+  margin-right: 2px;
+  padding-right: 7px;
+  width: 163.667px;
+}
+
+/* Element | http://localhost:3000/ */
+
+.SearchBar-fields {
+  width: 1522px;
+  padding-right: 0px;
+  padding-left: 50px;
+  margin-left: 100px;
+}
+
+
