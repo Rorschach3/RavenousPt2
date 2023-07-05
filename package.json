@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.6.9",
     "bootstrap": "^3.4.1",
     "create-react-app": "^5.0.1",
     "express": "^4.18.2",

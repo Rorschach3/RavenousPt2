@@ -4,7 +4,7 @@ import  './Mainpage.module.css';
 
 const API_KEY = 'bGUFUXszfq4PPppy6eB3L0y9kCfPlmQ0CE1h3jgttqg6kEURVnQDK9P7iuu6VpEybd5lvbgB5visIUFlt71NR5zFxqy_zXs7zRKdlDBsNP4D930pfnXf832wPCmdZHYx'
 
-const API_ENDPOINT = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=50";
+const API_ENDPOINT = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?limit=50/";
 
 function Mainpage({ onSearch }) {
   const [term, setTerm] = useState('');
@@ -26,36 +26,40 @@ function Mainpage({ onSearch }) {
 
   const Yelp = {
     search(term, location, sortBy) {
-      const fetch = require('node-fetch');
-      return fetch(
-        `${API_ENDPOINT}?location=${location}&term=${term}&sort_by=${sortBy}`,
-        { 
-          headers: {
-            accept: 'application/json',
-            Authorization: `Bearer ${API_KEY}`,
-          },
-        }
-      )
 
-      .then((response) => {
-        return response.json();
-      })
-      .then((jsonResponse) => {
-        if (jsonResponse.businesses) {
-          return jsonResponse.businesses.map((business) => ({
-            id: business.id,
-            imageSrc: business.image_url,
-            name: business.name,
-            address: business.location.address1,
-            city: business.location.city,
-            state: business.location.state,
-            zipCode: business.location.zip_code,
-            category: business.categories[0].title,
-            rating: business.rating,
-            reviewCount: business.review_count,
-          }));
-        }
-      })
+      const url = `${API_ENDPOINT}?location=${location}&term=${term}&sort_by=${sortBy}`;    
+      const fetchConfig = { 
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${API_KEY}`
+        },
+      }
+      fetch(url, fetchConfig)
+
+        .then((response) => {
+          if(response.ok) {
+            return response.json();
+          }
+          throw new Error('Error')
+
+        })
+        .then((jsonResponse) => {
+          if (jsonResponse.businesses) {
+            return jsonResponse.businesses.map((business) => ({
+              id: business.id,
+              imageSrc: business.image_url,
+              name: business.name,
+              address: business.location.address1,
+              city: business.location.city,
+              state: business.location.state,
+              zipCode: business.location.zip_code,
+              category: business.categories[0].title,
+              rating: business.rating,
+              reviewCount: business.review_count,
+            }));
+          }
+        })
 
   //   const response = await fetch(url, fetchOptions);
   //   if (response.ok) {
